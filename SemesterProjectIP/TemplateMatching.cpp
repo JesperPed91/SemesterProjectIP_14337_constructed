@@ -7,15 +7,8 @@
 using namespace cv;
 using namespace std;
 
-Mat im;
 
-TemplateMatching::TemplateMatching(Mat image)
-{
-	Mat im= image;
-}
-TemplateMatching::~TemplateMatching()
-{
-}
+Mat im;
 
 //temp matching function 
 void fastMatchTemplate(cv::Mat& srca,  // The reference image
@@ -81,8 +74,9 @@ void fastMatchTemplate(cv::Mat& srca,  // The reference image
 	res.copyTo(dst);
 }
 
-void templateMatching(){
-	//template matching 
+TemplateMatching::TemplateMatching(Mat image)
+{
+	im = image;
 	cv::Mat ref = im;
 	cv::Mat tpl1 = cv::imread("C:/Users/Tobia/Desktop/rod/t6.png");
 	cv::Mat tpl2 = cv::imread("C:/Users/Tobia/Desktop/rod/t7.png");
@@ -136,11 +130,21 @@ void templateMatching(){
 	if (temp[0] == true){
 		cout << "temp1 found" << endl;
 	}
-	else if (temp[0] == false){ cout << "temp1  not found" << endl;
+	else if (temp[0] == false){
+		cout << "temp1  not found" << endl;
 	}
 
 	if (temp[1] == true){
 		cout << "temp2 found" << endl;
 	}
 	else if (temp[1] == false){ cout << "temp2  not found" << endl; }
+
+	cv::imshow("result", ref);
+	cv::imshow("result2", ref);
 }
+TemplateMatching::~TemplateMatching()
+{
+}
+
+
+

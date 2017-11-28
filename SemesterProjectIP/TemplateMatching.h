@@ -12,8 +12,5 @@ public:
 	TemplateMatching();
 	TemplateMatching(Mat image);
 	~TemplateMatching();
-	void fastMatchTemplate();
-	void printResults();
-	Mat templateMatching();
 };
 

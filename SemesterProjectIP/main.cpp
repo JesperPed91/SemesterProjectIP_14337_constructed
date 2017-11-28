@@ -46,15 +46,6 @@ int main(int, char)
 		blobDetection blobDetect = blobDetection(im);
 		TemplateMatching tempMatch = TemplateMatching(im);
 
-		Mat im11 = blobDetect.im_with_keypoints;
-
-
-		// Show blobs
-		namedWindow("keypoints", WINDOW_NORMAL);
-		//imshow("keypoints", im11);
-		imshow("result", im);
-		imshow("result2", im);
-
 		if (waitKey(30) >= 0)
 			break;
 	}

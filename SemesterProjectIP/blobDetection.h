@@ -9,8 +9,6 @@ class blobDetection
 {
 public:
 	Mat im1;
-	Mat im_with_keypoints;
-	vector<KeyPoint> keypoints;
 	blobDetection();
 	blobDetection(Mat image);
 	~blobDetection();

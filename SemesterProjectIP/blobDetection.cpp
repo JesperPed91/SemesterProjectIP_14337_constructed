@@ -13,16 +13,7 @@ vector<KeyPoint> keypoints;
 
 blobDetection::blobDetection(Mat image)
 {
-	im1=image;
-	keypoints;
-	im_with_keypoints;
-}
-
-blobDetection::~blobDetection()
-{
-}
-
-void blobDetector(){
+	im1 = image;
 	// Setup SimpleBlobDetector parameters.
 	SimpleBlobDetector::Params params;
 
@@ -61,5 +52,11 @@ void blobDetector(){
 	// DrawMatchesFlags::DRAW_RICH_KEYPOINTS flag ensures
 	// the size of the circle corresponds to the size of blob
 	drawKeypoints(im1, keypoints, im_with_keypoints, Scalar(0, 0, 255), DrawMatchesFlags::DRAW_RICH_KEYPOINTS);
+	imshow("keypoints", im_with_keypoints);
 }
+
+blobDetection::~blobDetection()
+{
+}
+
 
