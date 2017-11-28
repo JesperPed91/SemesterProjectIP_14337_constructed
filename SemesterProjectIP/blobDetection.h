@@ -10,7 +10,7 @@ class blobDetection
 public:
 	Mat im1;
 	blobDetection();
-	blobDetection(Mat image);
+	blobDetection(Mat image, float x1, float y1, float x2, float y2);
 	~blobDetection();
 };
 

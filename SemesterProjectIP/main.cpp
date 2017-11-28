@@ -42,8 +42,7 @@ int main(int, char)
 				}
 			}
 		}
-
-		blobDetection blobDetect = blobDetection(im);
+		blobDetection blobDetect = blobDetection(im, 100, 100, 1280, 720);
 		TemplateMatching tempMatch = TemplateMatching(im);
 
 		if (waitKey(30) >= 0)
